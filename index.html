@@ -11,34 +11,71 @@
       class="bg-primary text-white border border-[rgb(72,72,72)] sticky top-0 z-[4]"
     >
       <div class="container mx-auto">
-        <div class="flex items-center py-[20px] justify-between">
+        <div class="flex items-center py-[20px]">
           <!-- LEFT PART -->
-          <div class="flex items-center order-2">
-            <ul class="flex items-center justify-center gap-x-[32px]">
-              <li class="header__linklist-item has-dropdown">
+          <div
+            class="flex items-center xl:order-2 flex-grow flex-shrink xl:justify-end"
+          >
+            <ul
+              class="flex xl:items-center xl:justify-center gap-x-[32px] fixed xl:static top-0 left-0 flex-col xl:flex-row h-screen xl:h-auto bg-white xl:bg-transparent text-primary xl:text-white w-[89vw] max-w-[400px] xl:w-auto xl:max-w-full z-10 px-[40px] xl:px-0 text-[1rem] transition-all duration-[.6s] ease-[cubic-bezier(.75,0,.175,1)] -translate-x-full xl:translate-x-0 menu-slider"
+            >
+              <div class="xl:hidden py-[20px] md:py-[24px]">
+                <button
+                  type="button"
+                  class="close-icon"
+                  data-action="close"
+                  title="Close"
+                >
+                  <svg
+                    focusable="false"
+                    width="14"
+                    height="14"
+                    class="icon icon--close"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      d="M13 13L1 1M13 1L1 13"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <li
+                class="py-[21px] xl:py-0 border-b border-primary xl:border-b-0"
+              >
                 <a class="header__linklist-link link--animated" href="#"
                   >Shop by Category</a
                 >
               </li>
-              <li class="header__linklist-item has-dropdown">
+              <li
+                class="py-[21px] xl:py-0 border-b border-primary xl:border-b-0"
+              >
                 <a class="header__linklist-link link--animated" href="#"
                   >Shop by Device</a
                 >
               </li>
-              <li class="header__linklist-item has-dropdown">
+              <li
+                class="py-[21px] xl:py-0 border-b border-primary xl:border-b-0"
+              >
                 <a class="header__linklist-link link--animated" href="#"
                   >Collections</a
                 >
               </li>
-              <li class="header__linklist-item">
+              <li
+                class="py-[21px] xl:py-0 border-b border-primary xl:border-b-0"
+              >
                 <a class="header__linklist-link link--animated" href="#"
                   >Blog</a
                 >
               </li>
             </ul>
 
-            <div class="hidden">
-              <button class="header__icon-wrapper tap-area hidden-desk">
+            <div
+              class="flex items-center justify-center xl:hidden gap-x-[20px] md:gap-x-[24px]"
+            >
+              <button class="burger-icon">
                 <svg
                   focusable="false"
                   width="18"
@@ -72,16 +109,20 @@
           </div>
 
           <!-- LOGO PART -->
-          <a class="order-1" href="/">
+          <a class="xl:order-1" href="/">
             <img
               class="max-w-[95px]"
               src="assets/logo-focal.png"
               alt="Focal Logo"
           /></a>
           <!-- SECONDARY LINKS PART -->
-          <div class="order-3">
-            <div class="flex items-center justify-center gap-x-[24px]">
-              <button class="header__icon-wrapper tap-area hidden-phone">
+          <div
+            class="xl:order-3 flex-grow flex-shrink flex items-center justify-end"
+          >
+            <div
+              class="flex items-center justify-center gap-x-[20px] md:gap-x-[24px]"
+            >
+              <button class="hidden md:inline">
                 <svg
                   focusable="false"
                   width="20"
@@ -102,9 +143,7 @@
                     d="M1 1h18v14H1z"
                   ></path>
                 </svg></button
-              ><a
-                href="#"
-                class="header__icon-wrapper tap-area hidden-pocket hidden-lap"
+              ><a href="#" class="hidden xl:inline"
                 ><svg
                   focusable="false"
                   width="18"
@@ -118,7 +157,7 @@
                     stroke="currentColor"
                     stroke-width="2"
                   ></path></svg></a
-              ><a href="#" class="header__icon-wrapper tap-area hidden-phone"
+              ><a href="#" class="hidden md:inline"
                 ><svg
                   focusable="false"
                   width="18"
@@ -173,5 +212,6 @@
         </div>
       </div>
     </nav>
+    <script src="./js/main.js"></script>
   </body>
 </html>
