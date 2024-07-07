@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "rgb(40,40,40)",
+        bgButton: "rgb(243,255,52)",
       },
     },
   },
