@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Swiper Pagination */
+
+.swiper-pagination {
+  bottom: 5% !important;
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.swiper-pagination-bullet-active::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  animation-name: swiperMoveLine;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+
+@keyframes swiperMoveLine {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Swiper Pagination */

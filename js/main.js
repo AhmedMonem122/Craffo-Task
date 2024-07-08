@@ -13,6 +13,18 @@ closeIcon.addEventListener("click", () => {
   menuSlider.classList.remove("translate-x-0");
 });
 
+document.body.addEventListener(
+  "click",
+  (e) => {
+    if (e.target === menuSlider) {
+      e.stopPropagation();
+    } else {
+      menuSlider.classList.remove("translate-x-0");
+    }
+  },
+  true
+);
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -30,10 +42,10 @@ const swiper = new Swiper(".swiper", {
   //   prevEl: ".swiper-button-prev",
   // },
 
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
 
   loop: true,
   watchSlidesProgress: true,
